@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from './logo.svg';  // Make sure to import the logo file
 import './App.css';
 
 function App() {
@@ -11,30 +12,30 @@ function App() {
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h1>Welcome to My React App</h1>
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to see the changes.
+          Edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <button className="toggle-button" onClick={toggleDarkMode}>
-          {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        </button>
-
-        <div className="cards-container">
+        <div className="cards">
           <div className="card">
             <h3>Fast Performance</h3>
-            <p>React ensures blazing-fast rendering for your web applications.</p>
+            <p>React apps are lightning fast!</p>
           </div>
           <div className="card">
             <h3>Component-Based</h3>
-            <p>Build encapsulated components that manage their own state.</p>
+            <p>Build encapsulated components for better organization.</p>
           </div>
           <div className="card">
             <h3>Learn Once, Write Anywhere</h3>
-            <p>React can be used to build web, mobile, and desktop apps!</p>
+            <p>Use your React knowledge on mobile, desktop, or web.</p>
           </div>
         </div>
+
+        <button onClick={toggleDarkMode} className="toggle-button">
+          Toggle {darkMode ? 'Light' : 'Dark'} Mode
+        </button>
 
         <a
           className="App-link"
@@ -42,7 +43,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn More About React
+          Learn React
         </a>
       </header>
     </div>
